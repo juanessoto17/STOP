@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/menuStyle.css">
+    <link href="https://fonts.cdnfonts.com/css/unispace" rel="stylesheet">
+    <title>CONTINENTAL WAR</title>
+</head>
+<body>
+    <div class="menu">
+        <h1>CONTINENTAL WAR</h1>
+        <h2>Cant. Jugadores</h2>
+        <div class="input-style">
+            <button id="decrement" onclick="stepper(this)"> - </button>
+            <input type="number" min="3" max="4" step="1"  value="3" id="input-cant" readonly>
+            <button id="increment" onclick="stepper(this)"> + </button>
+            
+        </div>
+        <div class="jugar"> 
+            <button onclick="play()">JUGAR</button>
+        </div>
+    </div>
+</body>
+<script src="../JAVASCRIPT/menuScript.js"></script>
+</html>

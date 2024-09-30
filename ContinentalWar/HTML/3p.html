@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>CW 3 Players</title>
+    <link rel="stylesheet" href="../CSS/3pStyles.css"/>
+    <link href="https://fonts.cdnfonts.com/css/unispace" rel="stylesheet">  
+</head>
+<body>
+    <div id="mapa">
+        <div id="playerCont">
+            <div id="pais-1"><h2 id="player-number">1</h2></div>
+            <div id="pais-2"><h2 id="player-number">2</h2></div>
+            <div id="pais-3"><h2 id="player-number">3</h2></div>
+        </div>
+        <div id="elegir-pais">
+            <h1 id="title">Elige un pais.</h1>
+            <div id="cont-cuadros">
+                <div id="cuadro-paises">
+                    <div id="cont-botones">
+                        <button id="col" onclick="col1()"></button>
+                        <button id="ven" onclick="ven1()"></button>
+                        <button id="bra" onclick="bra1()"></button>
+                        <button id="chi" onclick="chi1()"></button>
+                        <button id="mex" onclick="mex1()"></button>
+                    </div>
+                </div>
+                <div id="cuadro-paises">
+                    <div id="cont-botones">
+                        <button id="col" onclick="col2()"></button>
+                        <button id="ven" onclick="ven2()"></button>
+                        <button id="bra" onclick="bra2()"></button>
+                        <button id="chi" onclick="chi2()"></button>
+                        <button id="mex" onclick="mex2()"></button>
+                    </div>
+                </div>
+                <div id="cuadro-paises">
+                    <div id="cont-botones">
+                        <button id="col" onclick="col3()"></button>
+                        <button id="ven" onclick="ven3()"></button>
+                        <button id="bra" onclick="bra3()"></button>
+                        <button id="chi" onclick="chi3()"></button>
+                        <button id="mex" onclick="mex3()"></button>
+                    </div>
+                </div>
+            </div>
+            <h2 id="play">Presiona [ENTER] para iniciar...</h2>
+        </div> 
+        <div id="elegir-turno">
+            <h2>Eligiendo al proximo jugador...</h2>
+        </div>
+        <div id="pista-1">
+            <h2>Detente en el "STOP" o serás destruido 😐.</h2>
+        </div>
+        <div id="pista-2">
+            <h2>Deten el misil cuando este alineado con algún país 🤯.</h2>
+        </div>
+        <div id="good-message"><h2 id="good-text">¡Bien!</h2></div>
+        <div id="bad-message"><h2 id="bad-text">xxxx eliminado.</h2></div>
+        <div id="cont-bomba">
+            <div id="bomba"></div>
+        </div>
+        <div id="sZone">
+            <div id="textCont">
+                <p>Stop</p>
+            </div>
+        </div>
+    </div>
+    <script src="../JAVASCRIPT/3pScript.js"></script> 
+</body>
+</html>

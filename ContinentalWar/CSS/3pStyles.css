@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "unispace", sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-image: url("../SOURCES/IMG/BG.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#mapa {
+    position: relative;
+    background-image: url(../SOURCES/IMG/Ocean.png);
+    background-size: cover;
+    width: 95%;
+    height: 95%;
+    border-radius: 20px;
+    box-shadow: 0px 2px 33px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+}
+
+#sZone {
+    display: grid;
+    place-items: center;
+    background-color: #fc2c2c63;
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 75%;
+    pointer-events: none;
+}
+
+#textCont p {
+    text-align: center;
+    font-size: 52px;
+    color: #0b141d;
+}
+
+#playerCont {
+    width: 100%;
+    height: 150px;
+    margin-top: 2%;
+}
+
+#pais-1 {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 10%;
+    z-index: 2; 
+    background: url('../SOURCES/IMG/def.png') repeat-x; 
+    background-size: 150px 150px;
+    cursor: cell;
+}
+
+#pais-2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 45%;
+    z-index: 2; 
+    background: url('../SOURCES/IMG/def.png') repeat-x; 
+    background-size: 150px 150px;
+    cursor: cell;
+}
+
+#pais-3 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 10%;
+    z-index: 2; 
+    background: url('../SOURCES/IMG/def.png') repeat-x; 
+    background-size: 150px 150px;
+    cursor: cell;
+}
+
+#cont-bomba {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+}
+
+#bomba {
+    width: 60px;
+    height: 150px;
+    position: absolute;
+    z-index: 3; 
+    background: url('../SOURCES/IMG/bomb.png') repeat-x; 
+    background-size: 60px 150px;
+    cursor: cell;
+    left: -60px;
+}
+
+#player-number {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #000000;
+}
+
+#elegir-pais {
+    margin: 20px;
+    height: 50%;
+    text-align: center;
+    background-color: #677167;
+    border-radius: 20px;
+    box-shadow: 0px 0px 31px 0px rgb(0, 0, 0);
+}
+
+#title {
+    padding-top: 1%;
+    margin: 1%;
+}
+
+#play {
+    text-shadow: -1px -1px 14px rgba(255,255,255,1);
+    animation: parpadeo 2s ease 0s infinite normal forwards;
+    pointer-events: none;
+}
+
+#cont-cuadros {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#cuadro-paises {
+    width: 30%;
+    height: 80%;
+    background-color: #404440;
+    border-radius: 20px;
+}
+
+#elegir-turno {
+    display: grid;
+    align-items: center;
+    position: absolute;
+    height: 10%;
+    width: 60%;
+    margin: 20px;
+    bottom: 0px;
+    background-color: #677167;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 31px 0px rgb(0, 0, 0);
+}
+
+#pista-1 {
+    display: grid;
+    align-items: center;
+    position: absolute;
+    height: 5%;
+    width: 40%;
+    margin: 20px;
+    bottom: 0px;
+    background-color: #677167;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 31px 0px rgb(0, 0, 0);
+    z-index: 3;
+}
+
+#pista-2 {
+    display: grid;
+    align-items: center;
+    position: absolute;
+    height: 5%;
+    width: 50%;
+    margin: 20px;
+    bottom: 0px;
+    background-color: #677167;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 31px 0px rgb(0, 0, 0);
+    z-index: 3;
+}
+
+#good-message {
+    pointer-events: none;
+    display: grid;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-color: #13a00098;
+}
+
+#bad-message {
+    pointer-events: none;
+    display: grid;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-color: #a0000098;
+}
+
+/*----- Botones de selección -----*/
+
+#cont-botones {
+    margin-top: 5%;
+}
+
+#col {
+    width: 150px;
+    height: 150px;
+    background-image: url(../SOURCES/IMG/col.png);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    outline: 2px solid;
+    outline-color: rgba(114, 114, 114, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#col:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+  }
+
+#ven {
+    width: 150px;
+    height: 150px;
+    background-image: url(../SOURCES/IMG/ven.png); 
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    outline: 2px solid;
+    outline-color: rgba(114, 114, 114, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#ven:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+  }
+
+#bra {
+    width: 150px;
+    height: 150px;
+    background-image: url(../SOURCES/IMG/bra.png);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    outline: 2px solid;
+    outline-color: rgba(114, 114, 114, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#bra:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+  }
+
+#chi {
+    width: 150px;
+    height: 150px;
+    background-image: url(../SOURCES/IMG/chi.png);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    outline: 2px solid;
+    outline-color: rgba(114, 114, 114, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#chi:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+  }
+
+#mex {
+    width: 150px;
+    height: 150px;
+    background-image: url(../SOURCES/IMG/mex.png);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    outline: 2px solid;
+    outline-color: rgba(114, 114, 114, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#mex:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+  }
+
+/*----- Anims -----*/
+
+@keyframes parpadeo {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}

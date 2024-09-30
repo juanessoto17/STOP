@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "unispace", sans-serif;
+    background-image: url('../SOURCES/IMG/BG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #0b141d; 
+}
+.menu{
+    background-color: #677167 ;
+    border-radius: 15px;
+    text-align: center;
+    width: 1000px;
+    height: 350px;
+    position: relative;
+}
+.menu h1{
+    font-size: 65px;
+    padding-top: 25px;
+}
+
+.menu h2{
+    font-size: 45px;
+    padding-top: 30px;
+}
+.jugar{
+    position: absolute;
+    bottom: 6%;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.jugar button{
+    font-family: "unispace", sans-serif;
+    border-radius:15px ;
+    padding: 10px;
+    
+}
+.input-style{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 45px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+input[type="number"]{
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+button{
+    color:#677167;
+    background-color: #ffffff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+#decrement{
+    padding: 15px 10px 15px 25px;
+    border-radius: 45px 0 0 45px;
+}
+#increment{
+    padding: 15px 15px 15px 10px;
+    border-radius: 0 45px 45px 0;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.menu::after, .menu::before{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient( from var(--angle),#ffff,#ffff,#ffff,#000000,#ffff,#ffff ); 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 18px;
+    animation: 3s spin linear infinite  ;
+}
+.menu::before{
+    filter: blur(1.5rem);
+    opacity: 1.5;
+    
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
